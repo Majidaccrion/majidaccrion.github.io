@@ -227,6 +227,13 @@ h1, h2, h3, h4 { font-family: var(--font-body); color: var(--ink); line-height: 
 .crumbs { margin-top: 1rem; font-size: 0.83rem; color: var(--muted); }
 .crumbs a { color: var(--navy); }
 
+/* ---------- Software logo strip ---------- */
+.logo-strip-section { border-bottom: 1px solid var(--line); padding: 2.4rem 0 2.6rem; background: #fff; }
+.logo-strip-section .eyebrow { display: block; text-align: center; margin-bottom: 1.4rem; }
+.logo-strip { display: flex; align-items: center; justify-content: center; gap: 3.5rem; flex-wrap: wrap; }
+.logo-strip svg { height: 42px; width: auto; display: block; }
+@media (max-width: 760px) { .logo-strip { gap: 2rem; } .logo-strip svg { height: 32px; } }
+
 /* ---------- Cards ---------- */
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem; }
