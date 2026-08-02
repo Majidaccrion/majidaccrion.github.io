@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Accrion Accountants logo">
+  <defs>
+    <linearGradient id="navyG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d3563"/>
+      <stop offset="1" stop-color="#0d1b38"/>
+    </linearGradient>
+    <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e0c076"/>
+      <stop offset="1" stop-color="#b0872e"/>
+    </linearGradient>
+  </defs>
+  <!-- Left stroke of the A -->
+  <path d="M96 18 L118 18 L62 172 L36 172 Z" fill="url(#navyG)"/>
+  <!-- Right stroke of the A (gold) -->
+  <path d="M104 18 L126 18 L182 172 L156 172 Z" fill="url(#goldG)"/>
+  <!-- Rising bars -->
+  <rect x="76" y="128" width="13" height="44" rx="2" fill="url(#navyG)"/>
+  <rect x="96" y="108" width="13" height="64" rx="2" fill="url(#navyG)"/>
+  <rect x="116" y="88" width="13" height="84" rx="2" fill="url(#goldG)"/>
+  <!-- Swoosh -->
+  <path d="M22 150 C70 130 120 92 168 44" stroke="url(#navyG)" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <!-- Ascending dots -->
+  <circle cx="172" cy="40" r="7" fill="url(#goldG)"/>
+  <circle cx="184" cy="26" r="5" fill="url(#goldG)"/>
+  <circle cx="192" cy="14" r="3.5" fill="url(#goldG)"/>
+</svg>
