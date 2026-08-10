@@ -53,6 +53,7 @@ h1, h2, h3, h4 { font-family: var(--font-body); color: var(--ink); line-height: 
 }
 
 .section { padding: 4.5rem 0; }
+section[id] { scroll-margin-top: 105px; }
 .section.soft { background: #fbfcfe; }
 .section-head { max-width: 720px; margin: 0 auto 3rem; text-align: center; }
 .section-head h2 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 600; margin-bottom: 0.7rem; }
@@ -209,9 +210,9 @@ h1, h2, h3, h4 { font-family: var(--font-body); color: var(--ink); line-height: 
 .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
 .hero-cta .btn-outline { border-color: #25d366; color: #1da851; }
 .hero-cta .btn-outline:hover { background: #25d366; border-color: #25d366; color: #fff; }
-.hero-badges { display: flex; gap: 2.4rem; margin-top: 2.6rem; flex-wrap: wrap; }
-.hero-badges .badge b { display: block; font-size: 1.35rem; color: var(--navy); font-weight: 700; }
-.hero-badges .badge small { color: var(--muted); font-size: 0.8rem; }
+.hero-badges { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2.6rem; }
+.hero-badges .badge b { display: block; font-size: 1.2rem; color: var(--navy); font-weight: 700; }
+.hero-badges .badge small { color: var(--muted); font-size: 0.76rem; line-height: 1.4; display: block; }
 
 /* photo bleeds to the page edge and fills the hero — no card, no shadow */
 .hero-photo {
@@ -224,14 +225,7 @@ h1, h2, h3, h4 { font-family: var(--font-body); color: var(--ink); line-height: 
   z-index: 1;
 }
 .hero-photo img { width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: 42% center; }
-/* feather the left edge into the page so it reads as one surface */
-.hero-photo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0.55) 7%, rgba(255,255,255,0.12) 18%, rgba(255,255,255,0) 30%);
-  pointer-events: none;
-}
+/* clean edge — no wash, no blur */
 
 /* page hero (inner pages) — light and simple */
 .page-hero {
@@ -536,9 +530,7 @@ form.contact-form { display: grid; gap: 1.05rem; }
     margin: 2.4rem calc(-4.35vw) 0;   /* bleed past the container to both edges */
     height: 320px;
   }
-  .hero-photo::after {
-    background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.45) 12%, rgba(255,255,255,0) 34%);
-  }
+  .hero-badges { gap: 1rem; }
   .grid-3, .steps, .value-strip { grid-template-columns: repeat(2, 1fr); }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .footer-top { grid-template-columns: 1fr 1fr; }
